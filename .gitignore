@@ -1,0 +1,17 @@
+.env
+__pycache__/
+*.pyc
+*.sqlite
+*.db
+.DS_Store
+
+
+python3 -c "
+for filename in ['run.py', 'admin_panel.py', 'anketa.py', 'referral_storage.py']:
+    try:
+        with open(filename, 'r', encoding='utf-8') as f:
+            content = f.read()
+        print(f'✓ {filename} в порядке')
+    except:
+        print(f'✗ {filename} поврежден - нужно пересоздать')
+"
